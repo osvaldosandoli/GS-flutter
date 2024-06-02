@@ -8,14 +8,14 @@ class Resultado extends StatelessWidget {
       {super.key});
 //mudança nos textos de resultados
   String get fraseResultado {
-    if (pontuacao < 8) {
-      return 'Que pena não foi tão bem :(';
-    } else if (pontuacao < 12) {
-      return 'Dá para passar de ano!';
-    } else if (pontuacao < 16) {
-      return 'Nota 8 ._.';
+    if (pontuacao <= 14) {
+      return 'Que pena não foi tão bem :(\n Sua pontuação foi: $pontuacao / 45';
+    } else if (pontuacao < 28 && pontuacao > 21) {
+      return 'Dá para passar de ano!\n Sua pontuação foi: $pontuacao / 45';
+    } else if (pontuacao < 21 && pontuacao > 15) {
+      return 'Conselho do oceano ._.\n Sua pontuação foi: $pontuacao / 45';
     } else {
-      return 'Genio dos oceanos!';
+      return 'Genio dos oceanos! \n Sua pontuação foi: $pontuacao / 45';
     }
   }
 
